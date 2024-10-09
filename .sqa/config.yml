@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/IdentityPython/pyFF:
+      branch: master
+      repo: https://github.com/IdentityPython/pyFF
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/IdentityPython/pyFF git:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-copper-lynx.sh
+        container: qc.acc_clammy-puce-otter
+  QC.Doc:
+    repos:
+      github.com/IdentityPython/pyFF find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-tan-dalmatian.sh
+        container: qc.doc_flimsy-persimmon-beaver
+      github.com/IdentityPython/pyFF git:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-brown-centipede.sh
+        container: qc.doc_scanty-charcoal-whale
+      github.com/IdentityPython/pyFF markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-wheat-capybara.sh
+        container: qc.doc_shaky-eggplant-whale
+      github.com/IdentityPython/pyFF restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-azure-forest.sh
+        container: qc.doc_silly-magnolia-squirt
+  QC.Lic:
+    repos:
+      github.com/IdentityPython/pyFF licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-amethyst-spider.sh
+        container: qc.lic_randy-periwinkle-tarantula
+  QC.Sec:
+    repos:
+      github.com/IdentityPython/pyFF bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-bronze-cat.sh
+        container: qc.sec_hasty-denim-chihuahua
+  QC.Sty:
+    repos:
+      github.com/IdentityPython/pyFF flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-olivine-buzzard.sh
+        container: qc.sty_scanty-xanthic-tarantula
+  QC.Uni:
+    repos:
+      github.com/IdentityPython/pyFF pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-pumpkin-walrus.sh
+        container: qc.uni_sunny-pumpkin-balinese
+  QC.Ver:
+    repos:
+      github.com/IdentityPython/pyFF get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-indigo-nightingale.sh
+        container: qc.ver_breezy-alizarin-labradoodle
+timeout: 5400
