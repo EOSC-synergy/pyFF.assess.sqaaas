@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: release/2.2.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/IdentityPython/pyFF:
       branch: master
@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/IdentityPython/pyFF git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-copper-walrus.sh
-        container: qc.acc_surly-gold-chin
+        - /usr/bin/env sh .sqa/script.messy-thistle-antelope.sh
+        container: qc.acc_jumpy-sapphire-rottweiler
   QC.Doc:
     repos:
       github.com/IdentityPython/pyFF find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-platinum-wasp.sh
-        container: qc.doc_hasty-xanthic-vole
+        - /usr/bin/env sh .sqa/script.cozy-gold-butterfly.sh
+        container: qc.doc_stuffy-teal-oriole
       github.com/IdentityPython/pyFF git:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-violet-scorpion.sh
-        container: qc.doc_jumpy-cream-cichlid
+        - /usr/bin/env sh .sqa/script.jumpy-denim-shrew.sh
+        container: qc.doc_scaly-salmon-markhor
       github.com/IdentityPython/pyFF markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-emerald-dormouse.sh
-        container: qc.doc_leaky-blue-bongo
+        - /usr/bin/env sh .sqa/script.scaly-olive-bordeaux.sh
+        container: qc.doc_zippy-scarlet-collie
       github.com/IdentityPython/pyFF restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-orange-dane.sh
-        container: qc.doc_shaky-pear-fossa
+        - /usr/bin/env sh .sqa/script.seedy-myrtle-butterfly.sh
+        container: qc.doc_lanky-pear-wombat
   QC.Lic:
     repos:
       github.com/IdentityPython/pyFF licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-ochre-emu.sh
-        container: qc.lic_skinny-cornflower-pig
+        - /usr/bin/env sh .sqa/script.sunny-gamboge-grouse.sh
+        container: qc.lic_randy-malachite-loon
   QC.Sec:
     repos:
       github.com/IdentityPython/pyFF bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-pear-hummingbird.sh
-        container: qc.sec_wheezy-dandelion-neanderthal
+        - /usr/bin/env sh .sqa/script.hasty-ochre-wombat.sh
+        container: qc.sec_lanky-maroon-fox
   QC.Sty:
     repos:
       github.com/IdentityPython/pyFF flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-rust-cougar.sh
-        container: qc.sty_nippy-vermilion-magpie
+        - /usr/bin/env sh .sqa/script.lovely-orange-tapir.sh
+        container: qc.sty_snappy-zucchini-gopher
   QC.Uni:
     repos:
       github.com/IdentityPython/pyFF pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-brown-squid.sh
-        container: qc.uni_sickly-viridian-bulldog
+        - /usr/bin/env sh .sqa/script.woolly-auburn-maltese.sh
+        container: qc.uni_ready-periwinkle-termite
   QC.Ver:
     repos:
       github.com/IdentityPython/pyFF get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-ultramarine-millipede.sh
-        container: qc.ver_bumpy-lilac-axolotl
+        - /usr/bin/env sh .sqa/script.snippy-ecru-clam.sh
+        container: qc.ver_stinky-tomato-otter
 timeout: 5400

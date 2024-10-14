@@ -5,5 +5,5 @@
 
 (
 cd github.com/IdentityPython/pyFF &&
-    mdl --json .
+    git rev-parse --is-inside-work-tree 
 )
